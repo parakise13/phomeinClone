@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Roboto:wght@300;400&display=swap");
+
+/* 임시로 먼저 숨겨둠 */
+/*ul.inner {
+    display: none;
+}*/
+
+/* layout */
+.wrap {
+    position: relative;
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -1px;
+    height: 100vh;
+    background-color: #ccc;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+} /*fixed의 위치 기준은 window를 기준으로 함*/
+
+header .innerHeader {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+    height: 80px;
+    line-height: 80px;
+    transition: all 0.5s;
+}
+
+header .innerHeader.on {
+    height: 300px;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+header .innerHeader .logo {
+    float: left;
+}
+
+header .innerHeader .gnb {
+    float: left;
+    margin-left: 200px;
+}
+
+header .innerHeader .gnb > li {
+    float: left;
+    width: 150px;
+    position: relative;
+}
+
+header .innerHeader .gnb > li > a {
+    line-height: 80px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header .innerHeader .franchise {
+    float: right;
+    font-size: 15px;
+    color: #507219;
+    background-color: white;
+    width: 130px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+/* gnb depth */
+.innerHeader .gnb > li .inner {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 90px;
+    display: none;
+}
+
+.innerHeader .gnb > li .inner.on {
+    display: block;
+}
+
+.innerHeader .gnb > li a {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 3;
+    color: #999;
+}
+
+.innerHeader .gnb > li a:hover,
+.innerHeader .gnb > li a:focus {
+    color: white;
+    transition: all 0.3s;
+}
